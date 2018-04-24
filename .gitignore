@@ -6,3 +6,8 @@ __pycache__/
 
 logs
 .idea
+
+# Node.js
+node_modules/
+bundles/
+webpack-stats.json

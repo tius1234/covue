@@ -2,5 +2,6 @@
 # ------------------------------------------------------------------------------
 django==2.0.4  # pyup: < 2.1  # https://www.djangoproject.com/
 django-environ==0.4.4  # https://github.com/joke2k/django-environ
+djangorestframework==3.8.2
 
 mysqlclient==1.3.12
