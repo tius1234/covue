@@ -4,23 +4,21 @@
             yes/no 질문을 물어보세요:
             <input v-model="question">
         </p>
-        <p>${ answer }</p>
+        <p>{{ answer }}</p>
     </div>
 </template>
 
 <script>
-    import Vue from "vue";
     import axios from "axios";
     import _ from "lodash";
 
 
-    module.exports = {
-        delimiters: ['${','}'],
-        data: function() {
-            return {
-              question: '',
-              answer: '질문을 하기 전까지는 대답할 수 없습니다.'
-            }
+    export default {
+        data () {
+          return {
+            question: '',
+            answer: '질문을 하기 전까지는 대답할 수 없습니다.'
+          }
         },
         watch: {
             // 질문이 변경될 때 마다 이 기능이 실행됩니다.

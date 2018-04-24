@@ -1,10 +1,12 @@
-var path = require('path')
-var BundleTracker = require('webpack-bundle-tracker')
+const path = require('path')
+const BundleTracker = require('webpack-bundle-tracker')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   context: __dirname,
   entry: [
-    './assets/js/index'
+    // './assets/js/index',
+    './assets/js/ui_header'
   ],
   output: {
     path: path.resolve('./assets/bundles/'),
@@ -12,19 +14,26 @@ module.exports = {
   },
 
   plugins: [
-    new BundleTracker({filename: './webpack-stats.json'})
+    new BundleTracker({filename: './webpack-stats.json'}),
+    new ExtractTextPlugin('[name]')
   ],
 
   module: {
     loaders: [
       {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          extractCSS: true,
+          loaders: {
+            scss: 'vue-style-loader!css-loader!sass-loader'
+          }
+        }
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
       }
     ]
   },

@@ -5,8 +5,8 @@
     </div>
 </template>
 <script>
-  import BaseInputText from './components/BaseInputText.vue'
-  import Watch from './components/Watch.vue'
+  import BaseInputText from '../components/BaseInputText.vue'
+  import Watch from '../components/Watch.vue'
 
   export default {
     components: {
