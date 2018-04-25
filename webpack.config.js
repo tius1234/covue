@@ -5,8 +5,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   context: __dirname,
   entry: [
-    // './assets/js/index',
-    './assets/js/ui_header'
+    './assets/js/index',
+    './assets/js/components/sample/CurrencyInput',
+    './assets/js/components/sample/UiHeader',
+    './assets/js/components/sample/Watch'
   ],
   output: {
     path: path.resolve('./assets/bundles/'),

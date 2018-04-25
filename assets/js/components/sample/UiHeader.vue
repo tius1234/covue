@@ -26,13 +26,7 @@
 </script>
 
 <style lang="scss" scoped>
-    $headerHeight: 55px;
-    $headerPadding: 15px;
-    $headerColor: #eee;
-    $badgeColor: #ff3b30;
-    $iconColorActive: #007aff;
-    $iconColorDim: #aaa;
-    $iconColor: Inherit; // defined in #app
+    @import "../scss/var";
     .ui-header {
         position: absolute;
         left: 0;
@@ -98,6 +92,26 @@
             position: absolute;
             width: 100%;
             z-index: -2;
+        }
+    }
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
+    }
+    #app {
+        text-align: center;
+        color: #2c3e50;
+    }
+    .table {
+        display: table;
+        width: 100%;
+        .table-cell {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
         }
     }
 </style>
